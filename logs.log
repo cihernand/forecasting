@@ -28229,3 +28229,601 @@ ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
 
 2024-02-16 00:41:19,044:WARNING:predict_model >> Prediction Indices do not match test indices. Metrics will not be displayed.
 2024-02-16 00:41:19,221:INFO:Visual Rendered Successfully
+2024-02-16 00:50:30,535:INFO:Visual Rendered Successfully
+2024-02-16 00:50:34,881:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: mase() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 175, in mase
+    return mean_absolute_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 417, in mean_absolute_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,881:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: rmsse() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 185, in rmsse
+    return mean_squared_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 680, in mean_squared_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,884:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,885:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,887:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,888:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,889:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:50:34,895:WARNING:predict_model >> Prediction Indices do not match test indices. Metrics will not be displayed.
+2024-02-16 00:50:35,135:INFO:Visual Rendered Successfully
+2024-02-16 00:53:52,925:INFO:Saving 'forecast_observed_last12months.pdf\Out-of-Sample Forecast Plot.html'
+2024-02-16 00:54:03,524:INFO:Saving 'forecast_observed_last12months.pdf\Out-of-Sample Forecast Plot.html'
+2024-02-16 00:55:48,733:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: mase() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 175, in mase
+    return mean_absolute_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 417, in mean_absolute_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,734:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: rmsse() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 185, in rmsse
+    return mean_squared_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 680, in mean_squared_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,735:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,735:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,736:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,737:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,739:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:55:48,747:WARNING:predict_model >> Prediction Indices do not match test indices. Metrics will not be displayed.
+2024-02-16 00:55:48,950:INFO:Visual Rendered Successfully
+2024-02-16 00:56:02,136:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: mase() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 175, in mase
+    return mean_absolute_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 417, in mean_absolute_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,137:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: rmsse() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 185, in rmsse
+    return mean_squared_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 680, in mean_squared_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,137:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,139:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,140:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,141:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,143:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:56:02,149:WARNING:predict_model >> Prediction Indices do not match test indices. Metrics will not be displayed.
+2024-02-16 00:56:02,344:INFO:Visual Rendered Successfully
+2024-02-16 00:56:23,987:INFO:Visual Rendered Successfully
