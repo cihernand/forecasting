@@ -27889,3 +27889,343 @@ TypeError: The DType <class 'numpy.dtype[float64]'> could not be promoted by <cl
 'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
 2024-02-16 00:41:10,420:WARNING:
 'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2024-02-16 00:41:15,144:ERROR:create_model() for catboost_cds_dt raised an exception or returned all 0.0:
+2024-02-16 00:41:15,144:ERROR:joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\externals\loky\process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\externals\loky\process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 589, in __call__
+    return [func(*args, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 589, in <listcomp>
+    return [func(*args, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\time_series\forecasting\model_selection.py", line 178, in _fit_and_score
+    y_pred, lower, upper = get_predictions_with_intervals(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\time_series\forecasting\__init__.py", line 110, in get_predictions_with_intervals
+    y_pred = forecaster.predict(fh=fh, X=X)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_base.py", line 404, in predict
+    y_pred = self._predict(fh=fh, X=X_inner)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\compose\_pipeline.py", line 511, in _predict
+    return self.forecaster_.predict(fh, X)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_base.py", line 404, in predict
+    y_pred = self._predict(fh=fh, X=X_inner)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\compose\_pipeline.py", line 1006, in _predict
+    y_pred = self.forecaster_.predict(fh=fh, X=X)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_base.py", line 404, in predict
+    y_pred = self._predict(fh=fh, X=X_inner)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\models\time_series.py", line 2693, in _predict
+    y = self._forecaster.predict(fh=fh, X=X)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_base.py", line 404, in predict
+    y_pred = self._predict(fh=fh, X=X_inner)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\compose\_pipeline.py", line 1006, in _predict
+    y_pred = self.forecaster_.predict(fh=fh, X=X)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_base.py", line 404, in predict
+    y_pred = self._predict(fh=fh, X=X_inner)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_sktime.py", line 30, in _predict
+    y_pred = self._predict_fixed_cutoff(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\base\_sktime.py", line 74, in _predict_fixed_cutoff
+    y_pred = self._predict_last_window(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\compose\_reduce.py", line 860, in _predict_last_window
+    y_last, X_last = self._get_shifted_window(X_update=X)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\forecasting\compose\_reduce.py", line 378, in _get_shifted_window
+    X.update(X_update)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pandas\core\frame.py", line 8263, in update
+    self.loc[:, col] = expressions.where(mask, this, that)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pandas\core\computation\expressions.py", line 258, in where
+    return _where(cond, a, b) if use_numexpr else _where_standard(cond, a, b)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pandas\core\computation\expressions.py", line 172, in _where_standard
+    return np.where(cond, a, b)
+  File "<__array_function__ internals>", line 180, in where
+TypeError: The DType <class 'numpy.dtype[float64]'> could not be promoted by <class 'numpy.dtype[datetime64]'>. This means that no common DType exists for the given inputs. For example they cannot be stored in a single array unless the dtype is `object`. The full list of DTypes is: (<class 'numpy.dtype[float64]'>, <class 'numpy.dtype[datetime64]'>)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 815, in compare_models
+    model, model_fit_time = self._create_model(**create_model_args)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 1533, in _create_model
+    model, model_fit_time, model_results, _ = self._create_model_with_cv(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\time_series\forecasting\oop.py", line 2644, in _create_model_with_cv
+    scores, cutoffs = cross_validate(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\time_series\forecasting\model_selection.py", line 309, in cross_validate
+    out = parallel(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 1952, in __call__
+    return output if self.return_generator else list(output)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 1595, in _get_outputs
+    yield from self._retrieve()
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 1699, in _retrieve
+    self._raise_error_fast()
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 1734, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 736, in get_result
+    return self._return_or_raise()
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\joblib\parallel.py", line 754, in _return_or_raise
+    raise self._result
+TypeError: The DType <class 'numpy.dtype[float64]'> could not be promoted by <class 'numpy.dtype[datetime64]'>. This means that no common DType exists for the given inputs. For example they cannot be stored in a single array unless the dtype is `object`. The full list of DTypes is: (<class 'numpy.dtype[float64]'>, <class 'numpy.dtype[datetime64]'>)
+
+2024-02-16 00:41:15,165:INFO:Initializing create_model()
+2024-02-16 00:41:15,166:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x000002AACE3D51F0>, estimator=STLForecaster(sp=12), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-02-16 00:41:15,166:INFO:Checking exceptions
+2024-02-16 00:41:15,168:INFO:Importing libraries
+2024-02-16 00:41:15,169:INFO:Copying training dataset
+2024-02-16 00:41:15,172:INFO:Defining folds
+2024-02-16 00:41:15,172:INFO:Declaring metric variables
+2024-02-16 00:41:15,173:INFO:Importing untrained model
+2024-02-16 00:41:15,173:INFO:Declaring custom model
+2024-02-16 00:41:15,175:INFO:STLF Imported successfully
+2024-02-16 00:41:15,176:INFO:Cross validation set to False
+2024-02-16 00:41:15,176:INFO:Fitting Model
+2024-02-16 00:41:15,211:INFO:STLForecaster(sp=12)
+2024-02-16 00:41:15,211:INFO:create_model() successfully completed......................................
+2024-02-16 00:41:15,340:ERROR:create_model() for STLForecaster(sp=12) raised an exception or returned all 0.0:
+2024-02-16 00:41:15,343:ERROR:Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2024-02-16 00:41:15,344:INFO:Initializing create_model()
+2024-02-16 00:41:15,344:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x000002AACE3D51F0>, estimator=NaiveForecaster(sp=12), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-02-16 00:41:15,344:INFO:Checking exceptions
+2024-02-16 00:41:15,344:INFO:Importing libraries
+2024-02-16 00:41:15,344:INFO:Copying training dataset
+2024-02-16 00:41:15,344:INFO:Defining folds
+2024-02-16 00:41:15,344:INFO:Declaring metric variables
+2024-02-16 00:41:15,344:INFO:Importing untrained model
+2024-02-16 00:41:15,344:INFO:Declaring custom model
+2024-02-16 00:41:15,344:INFO:Seasonal Naive Forecaster Imported successfully
+2024-02-16 00:41:15,344:INFO:Cross validation set to False
+2024-02-16 00:41:15,344:INFO:Fitting Model
+2024-02-16 00:41:15,373:INFO:NaiveForecaster(sp=12)
+2024-02-16 00:41:15,374:INFO:create_model() successfully completed......................................
+2024-02-16 00:41:15,493:ERROR:create_model() for NaiveForecaster(sp=12) raised an exception or returned all 0.0:
+2024-02-16 00:41:15,494:ERROR:Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2024-02-16 00:41:15,494:INFO:Initializing create_model()
+2024-02-16 00:41:15,494:INFO:create_model(self=<pycaret.time_series.forecasting.oop.TSForecastingExperiment object at 0x000002AACE3D51F0>, estimator=Croston(), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-02-16 00:41:15,494:INFO:Checking exceptions
+2024-02-16 00:41:15,494:INFO:Importing libraries
+2024-02-16 00:41:15,494:INFO:Copying training dataset
+2024-02-16 00:41:15,494:INFO:Defining folds
+2024-02-16 00:41:15,494:INFO:Declaring metric variables
+2024-02-16 00:41:15,494:INFO:Importing untrained model
+2024-02-16 00:41:15,494:INFO:Declaring custom model
+2024-02-16 00:41:15,494:INFO:Croston Imported successfully
+2024-02-16 00:41:15,494:INFO:Cross validation set to False
+2024-02-16 00:41:15,494:INFO:Fitting Model
+2024-02-16 00:41:15,511:INFO:Croston()
+2024-02-16 00:41:15,511:INFO:create_model() successfully completed......................................
+2024-02-16 00:41:15,627:ERROR:create_model() for Croston() raised an exception or returned all 0.0:
+2024-02-16 00:41:15,627:ERROR:Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py", line 953, in compare_models
+    assert (
+AssertionError
+
+2024-02-16 00:41:15,660:INFO:_master_model_container: 41
+2024-02-16 00:41:15,661:INFO:_display_container: 2
+2024-02-16 00:41:15,661:INFO:[STLForecaster(sp=12), NaiveForecaster(sp=12), Croston()]
+2024-02-16 00:41:15,661:INFO:compare_models() successfully completed......................................
+2024-02-16 00:41:18,381:INFO:Visual Rendered Successfully
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: mase() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 175, in mase
+    return mean_absolute_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 417, in mean_absolute_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+TypeError: rmsse() got an unexpected keyword argument 'sample_weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 185, in rmsse
+    return mean_squared_scaled_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 680, in mean_squared_scaled_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 196, in mean_absolute_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 442, in mean_squared_error
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 168, in mape
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\containers\metrics\time_series.py", line 159, in _smape_loss
+    return mean_absolute_percentage_error(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sktime\performance_metrics\forecasting\_functions.py", line 1537, in mean_absolute_percentage_error
+    _, y_true, y_pred, multioutput = _check_reg_targets(y_true, y_pred, multioutput)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,030:WARNING:c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py:586: UserWarning:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 580, in _calculate_metric
+    calculated_metric = score_func(y_test, target, sample_weight=weights, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\pycaret\utils\generic.py", line 584, in _calculate_metric
+    calculated_metric = score_func(y_test, target, **kwargs)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\metrics\_regression.py", line 100, in _check_reg_targets
+    check_consistent_length(y_true, y_pred)
+  File "c:\Users\mar\anaconda3\envs\forpycaret\lib\site-packages\sklearn\utils\validation.py", line 397, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [12, 24]
+
+
+
+2024-02-16 00:41:19,044:WARNING:predict_model >> Prediction Indices do not match test indices. Metrics will not be displayed.
+2024-02-16 00:41:19,221:INFO:Visual Rendered Successfully
